@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><title>Integración de inventarios, ventas, manufactura, finanzas y contabilidad</title>
+<meta name="viewport" content="width=1600">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',Calibri,Arial,sans-serif;background:#fff;color:#16303B;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:1600px;margin:0 auto;padding:44px 48px 36px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid #0B5563;padding-bottom:16px;margin-bottom:30px}
+.head h1{font-size:30px;font-weight:800;color:#0A2B3D;letter-spacing:-.4px}
+.head p{font-size:14px;color:#4B6672;margin-top:4px;font-weight:500}
+.tag{font-size:13px;font-weight:700;color:#fff;background:linear-gradient(90deg,#0B5563,#3B4A9E);padding:8px 16px;border-radius:999px;white-space:nowrap}
+.root{display:flex;flex-direction:column;align-items:center}
+.rootnode{background:linear-gradient(135deg,#0A2B3D,#14707F 60%,#3B4A9E);color:#fff;border-radius:20px;padding:20px 38px;text-align:center;max-width:760px;box-shadow:0 8px 22px rgba(10,43,61,.22)}
+.rootnode b{display:block;font-size:24px;font-weight:800;letter-spacing:-.3px}
+.rootnode span{display:block;font-size:13.5px;margin-top:6px;opacity:.88;font-weight:500}
+.rootline{width:2px;height:30px;background:#9DB5BF}
+.tree{display:flex;gap:16px}
+.branch{flex:1;position:relative;min-width:0;display:flex;flex-direction:column}
+.branch::before{content:"";position:absolute;top:0;left:-8px;right:-8px;height:2px;background:#9DB5BF}
+.branch:first-child::before{left:50%}
+.branch:last-child::before{right:50%}
+.branch:only-child::before{display:none}
+.conn{position:relative;height:74px;display:flex;align-items:center;justify-content:center}
+.conn::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:#9DB5BF}
+.conn::after{content:"";position:absolute;left:50%;bottom:-1px;margin-left:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:9px solid #9DB5BF}
+.pill{position:relative;z-index:1;background:#fff;border:1.8px solid var(--c);color:var(--c);font-style:italic;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;text-align:center;max-width:95%}
+.card{flex:1;border-radius:16px;overflow:hidden;background:#F4F9FB;border:1.5px solid color-mix(in srgb,var(--c) 28%,#fff);box-shadow:0 4px 14px rgba(10,43,61,.08)}
+.ch{background:var(--c);color:#fff;font-weight:800;font-size:16px;padding:13px 14px;text-align:center;letter-spacing:-.1px}
+.cb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:9px}
+.it{font-size:12.6px;line-height:1.45;background:#fff;border-left:4px solid var(--c);border-radius:8px;padding:7px 9px;box-shadow:0 1px 3px rgba(10,43,61,.06)}
+.it em{display:block;font-size:11.3px;font-weight:700;color:var(--c);font-style:italic;margin-bottom:1px}
+.it b{font-weight:700;color:#0A2B3D}
+.xr{margin-top:34px;border:1.5px solid #CFE0E7;border-radius:16px;padding:16px 20px;background:linear-gradient(180deg,#fff,#F4F9FB)}
+.xr h2{font-size:15px;font-weight:800;color:#0A2B3D;margin-bottom:12px}
+.chains{display:flex;flex-direction:column;gap:10px}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.cn{background:#0A2B3D;color:#fff;font-weight:700;font-size:12.8px;padding:7px 14px;border-radius:10px}
+.cl{font-size:12px;font-style:italic;font-weight:700;color:#14707F;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.cl::after{content:"";width:22px;height:2px;background:#14707F;display:inline-block}
+.cl i{font-style:normal;color:#14707F;font-size:10px;margin-left:-10px;order:3}
+.foot{margin-top:20px;font-size:11.5px;color:#5C7580;line-height:1.5;border-top:1px solid #DCE8ED;padding-top:12px}
+.foot b{color:#0A2B3D}
+</style></head><body><div class="page">
+<div class="head"><div><h1>Integración de inventarios, ventas, manufactura, finanzas y contabilidad</h1><p>Mapa conceptual · Reto 1: Conexión de puntos clave, mapeando la integración de la cadena de suministros</p></div><div class="tag">Mapa e de 5</div></div>
+<div class="root"><div class="rootnode"><b>Integración de sistemas (ERP)</b><span>Módulos que comparten una sola base de datos: cada operación se registra una vez y se refleja en todas las áreas</span></div><div class="rootline"></div></div>
+<div class="tree"><div class="branch" style="--c:#0B5563"><div class="conn"><span class="pill">controla</span></div>
+<div class="card"><div class="ch">Inventarios</div><div class="cb"><div class="it"><em>registra</em>existencias por almacén y ubicación</div><div class="it"><em>recibe</em>entradas por compras y producción</div><div class="it"><em>descarga</em>salidas por ventas y consumo</div><div class="it"><em>valúa con</em><b>PEPS</b> o <b>costo promedio</b></div><div class="it"><em>alerta con</em>puntos de reorden y stock de seguridad</div><div class="it"><em>alimenta</em>costo de ventas y activo circulante</div></div></div></div><div class="branch" style="--c:#14707F"><div class="conn"><span class="pill">gestiona</span></div>
+<div class="card"><div class="ch">Ventas</div><div class="cb"><div class="it"><em>flujo</em>cotización → pedido → entrega → <b>factura (CFDI)</b></div><div class="it"><em>consulta</em>disponibilidad de inventario en línea</div><div class="it"><em>controla</em>crédito y <b>cuentas por cobrar</b></div><div class="it"><em>administra</em>listas de precios y comisiones</div><div class="it"><em>genera</em>ingresos y costo de lo vendido</div></div></div></div><div class="branch" style="--c:#1C6A9C"><div class="conn"><span class="pill">planea</span></div>
+<div class="card"><div class="ch">Manufactura</div><div class="cb"><div class="it"><em>define</em><b>lista de materiales</b> (BOM) por producto</div><div class="it"><em>calcula</em><b>MRP:</b> requerimientos de materiales</div><div class="it"><em>emite</em>órdenes de producción</div><div class="it"><em>costea</em>materia prima, mano de obra y gastos indirectos</div><div class="it"><em>consume</em>materia prima y genera <b>producto terminado</b></div></div></div></div><div class="branch" style="--c:#2A55A3"><div class="conn"><span class="pill">administra</span></div>
+<div class="card"><div class="ch">Financiero</div><div class="cb"><div class="it"><em>gestiona</em><b>tesorería</b> y flujo de efectivo</div><div class="it"><em>controla</em>cuentas por pagar y por cobrar</div><div class="it"><em>compara</em>presupuesto contra resultados reales</div><div class="it"><em>calcula</em>indicadores de liquidez y rentabilidad</div><div class="it"><em>apoya</em>decisiones de inversión y financiamiento</div></div></div></div><div class="branch" style="--c:#3B4A9E"><div class="conn"><span class="pill">formaliza</span></div>
+<div class="card"><div class="ch">Contable</div><div class="cb"><div class="it"><em>genera</em><b>pólizas automáticas</b> desde cada módulo</div><div class="it"><em>concentra</em>libro mayor y balanza de comprobación</div><div class="it"><em>produce</em><b>estados financieros</b> oportunos</div><div class="it"><em>cumple</em>contabilidad electrónica y CFDI ante el SAT (CFF)</div><div class="it"><em>asegura</em>trazabilidad para auditoría</div></div></div></div><div class="branch" style="--c:#4A3F93"><div class="conn"><span class="pill">logra</span></div>
+<div class="card"><div class="ch">Beneficios</div><div class="cb"><div class="it"><em>ofrece</em><b>datos en tiempo real</b> para decidir</div><div class="it"><em>elimina</em><b>captura duplicada</b> y errores</div><div class="it"><em>facilita</em><b>conciliaciones</b> entre áreas</div><div class="it"><em>fortalece</em><b>control interno</b> y auditoría</div><div class="it"><em>mejora</em>calidad de la información financiera</div></div></div></div></div>
+<div class="xr"><h2>Relaciones transversales entre conceptos</h2><div class="chains"><div class="chain"><span class="cn">Venta</span><span class="cl">reduce<i>&#9654;</i></span><span class="cn">Inventario</span><span class="cl">dispara<i>&#9654;</i></span><span class="cn">Orden de producción</span><span class="cl">genera<i>&#9654;</i></span><span class="cn">Costo</span><span class="cl">se registra en<i>&#9654;</i></span><span class="cn">Póliza contable</span><span class="cl">y culmina en<i>&#9654;</i></span><span class="cn">Estados financieros</span></div><div class="chain"><span class="cn">Base de datos única</span><span class="cl">evita<i>&#9654;</i></span><span class="cn">duplicidad</span><span class="cl">y asegura<i>&#9654;</i></span><span class="cn">información consistente</span></div></div></div>
+<div class="foot"><b>Fuentes base:</b> Ruiz Anchondo (2009); Izaguirre Castro (2025); Fugini et al. (2018); Mejía Trejo (2023); Cámara de Diputados (2024).</div>
+</div></body></html>

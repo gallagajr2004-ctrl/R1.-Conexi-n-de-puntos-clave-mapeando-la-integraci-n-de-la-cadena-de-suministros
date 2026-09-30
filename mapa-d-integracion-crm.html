@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><title>Integración de la información de CRM</title>
+<meta name="viewport" content="width=1600">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',Calibri,Arial,sans-serif;background:#fff;color:#16303B;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:1600px;margin:0 auto;padding:44px 48px 36px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid #0B5563;padding-bottom:16px;margin-bottom:30px}
+.head h1{font-size:30px;font-weight:800;color:#0A2B3D;letter-spacing:-.4px}
+.head p{font-size:14px;color:#4B6672;margin-top:4px;font-weight:500}
+.tag{font-size:13px;font-weight:700;color:#fff;background:linear-gradient(90deg,#0B5563,#3B4A9E);padding:8px 16px;border-radius:999px;white-space:nowrap}
+.root{display:flex;flex-direction:column;align-items:center}
+.rootnode{background:linear-gradient(135deg,#0A2B3D,#14707F 60%,#3B4A9E);color:#fff;border-radius:20px;padding:20px 38px;text-align:center;max-width:760px;box-shadow:0 8px 22px rgba(10,43,61,.22)}
+.rootnode b{display:block;font-size:24px;font-weight:800;letter-spacing:-.3px}
+.rootnode span{display:block;font-size:13.5px;margin-top:6px;opacity:.88;font-weight:500}
+.rootline{width:2px;height:30px;background:#9DB5BF}
+.tree{display:flex;gap:16px}
+.branch{flex:1;position:relative;min-width:0;display:flex;flex-direction:column}
+.branch::before{content:"";position:absolute;top:0;left:-8px;right:-8px;height:2px;background:#9DB5BF}
+.branch:first-child::before{left:50%}
+.branch:last-child::before{right:50%}
+.branch:only-child::before{display:none}
+.conn{position:relative;height:74px;display:flex;align-items:center;justify-content:center}
+.conn::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:#9DB5BF}
+.conn::after{content:"";position:absolute;left:50%;bottom:-1px;margin-left:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:9px solid #9DB5BF}
+.pill{position:relative;z-index:1;background:#fff;border:1.8px solid var(--c);color:var(--c);font-style:italic;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;text-align:center;max-width:95%}
+.card{flex:1;border-radius:16px;overflow:hidden;background:#F4F9FB;border:1.5px solid color-mix(in srgb,var(--c) 28%,#fff);box-shadow:0 4px 14px rgba(10,43,61,.08)}
+.ch{background:var(--c);color:#fff;font-weight:800;font-size:16px;padding:13px 14px;text-align:center;letter-spacing:-.1px}
+.cb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:9px}
+.it{font-size:12.6px;line-height:1.45;background:#fff;border-left:4px solid var(--c);border-radius:8px;padding:7px 9px;box-shadow:0 1px 3px rgba(10,43,61,.06)}
+.it em{display:block;font-size:11.3px;font-weight:700;color:var(--c);font-style:italic;margin-bottom:1px}
+.it b{font-weight:700;color:#0A2B3D}
+.xr{margin-top:34px;border:1.5px solid #CFE0E7;border-radius:16px;padding:16px 20px;background:linear-gradient(180deg,#fff,#F4F9FB)}
+.xr h2{font-size:15px;font-weight:800;color:#0A2B3D;margin-bottom:12px}
+.chains{display:flex;flex-direction:column;gap:10px}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.cn{background:#0A2B3D;color:#fff;font-weight:700;font-size:12.8px;padding:7px 14px;border-radius:10px}
+.cl{font-size:12px;font-style:italic;font-weight:700;color:#14707F;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.cl::after{content:"";width:22px;height:2px;background:#14707F;display:inline-block}
+.cl i{font-style:normal;color:#14707F;font-size:10px;margin-left:-10px;order:3}
+.foot{margin-top:20px;font-size:11.5px;color:#5C7580;line-height:1.5;border-top:1px solid #DCE8ED;padding-top:12px}
+.foot b{color:#0A2B3D}
+</style></head><body><div class="page">
+<div class="head"><div><h1>Integración de la información de CRM</h1><p>Mapa conceptual · Reto 1: Conexión de puntos clave, mapeando la integración de la cadena de suministros</p></div><div class="tag">Mapa d de 5</div></div>
+<div class="root"><div class="rootnode"><b>CRM: Gestión de Relaciones con Clientes</b><span>Estrategia centrada en el cliente, apoyada en tecnología, que unifica ventas, marketing y servicio</span></div><div class="rootline"></div></div>
+<div class="tree"><div class="branch" style="--c:#0B5563"><div class="conn"><span class="pill">se define como</span></div>
+<div class="card"><div class="ch">Concepto</div><div class="cb"><div class="it"><em>una</em><b>estrategia de negocio</b> centrada en el cliente</div><div class="it"><em>apoyada en</em><b>tecnología</b> para gestionar cada interacción</div><div class="it"><em>que integra</em><b>ventas, marketing y servicio</b></div><div class="it"><em>para</em><b>captar, retener y fidelizar</b> clientes</div></div></div></div><div class="branch" style="--c:#14707F"><div class="conn"><span class="pill">se clasifica en</span></div>
+<div class="card"><div class="ch">Tipos de CRM</div><div class="cb"><div class="it"><em>automatiza</em><b>Operativo:</b> fuerza de ventas, campañas y atención</div><div class="it"><em>explota datos</em><b>Analítico:</b> segmenta, predice y mide rentabilidad del cliente</div><div class="it"><em>comparte</em><b>Colaborativo:</b> coordina canales y áreas con el cliente</div></div></div></div><div class="branch" style="--c:#1C6A9C"><div class="conn"><span class="pill">integra datos de</span></div>
+<div class="card"><div class="ch">Fuentes de datos</div><div class="cb"><div class="it"><em>origen</em><b>Ventas:</b> prospectos, cotizaciones y cierres</div><div class="it"><em>origen</em><b>Marketing:</b> campañas, leads y respuesta</div><div class="it"><em>origen</em><b>Servicio:</b> tickets, quejas y call center</div><div class="it"><em>origen</em><b>Digitales:</b> web, e-commerce y redes sociales</div><div class="it"><em>origen</em><b>Facturación y cobranza</b> del ERP</div></div></div></div><div class="branch" style="--c:#2A55A3"><div class="conn"><span class="pill">se conecta con</span></div>
+<div class="card"><div class="ch">Sistemas integrados</div><div class="cb"><div class="it"><em>ERP</em>inventario disponible, pedidos y facturas</div><div class="it"><em>BI y analítica</em>tableros, pronósticos y segmentación</div><div class="it"><em>automatización de marketing</em>correo, campañas y seguimiento</div><div class="it"><em>cadena de suministro</em>fechas de entrega visibles al cliente</div><div class="it"><em>canales</em>telefonía, chat y mensajería</div></div></div></div><div class="branch" style="--c:#3B4A9E"><div class="conn"><span class="pill">construye una</span></div>
+<div class="card"><div class="ch">Vista 360° del cliente</div><div class="cb"><div class="it"><em>mediante</em><b>base única de clientes</b> (fuente única de verdad)</div><div class="it"><em>registra</em>historial de compras, contactos y reclamos</div><div class="it"><em>permite</em><b>segmentar</b> y crear perfiles</div><div class="it"><em>evita</em><b>duplicidad</b> y silos de información</div></div></div></div><div class="branch" style="--c:#4A3F93"><div class="conn"><span class="pill">genera y enfrenta</span></div>
+<div class="card"><div class="ch">Beneficios y retos</div><div class="cb"><div class="it"><em>beneficio</em><b>fidelización</b> y mayor valor del cliente</div><div class="it"><em>beneficio</em><b>pronóstico de ventas</b> más preciso</div><div class="it"><em>beneficio</em><b>personalización</b> de ofertas y servicio</div><div class="it"><em>reto</em><b>calidad de datos</b> y adopción por usuarios</div><div class="it"><em>reto</em><b>privacidad</b> y protección de datos personales</div></div></div></div></div>
+<div class="xr"><h2>Relaciones transversales entre conceptos</h2><div class="chains"><div class="chain"><span class="cn">Prospecto</span><span class="cl">se convierte en<i>&#9654;</i></span><span class="cn">Cliente</span><span class="cl">que se retiene mediante<i>&#9654;</i></span><span class="cn">Fidelización</span></div><div class="chain"><span class="cn">CRM</span><span class="cl">se integra con<i>&#9654;</i></span><span class="cn">ERP</span><span class="cl">para dar seguimiento de<i>&#9654;</i></span><span class="cn">pedido a factura</span></div><div class="chain"><span class="cn">Datos de clientes</span><span class="cl">exigen<i>&#9654;</i></span><span class="cn">protección de datos personales</span></div></div></div>
+<div class="foot"><b>Fuentes base:</b> Fernández Otero y Navarro Huerga (2014); Fugini et al. (2018); Mejía Trejo (2023).</div>
+</div></body></html>
